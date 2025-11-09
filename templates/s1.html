@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>service</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='s1.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="cn">
+        <div class="nn">
+            <div class="logo"></div>
+            <u style="text-underline-offset: 5px; font-style: italic; color:black;"><h1>BRAND GARAGE</h1></u>
+        </div>
+        <ul>
+             <i class="fa-solid fa-house" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('car') }}" ><li>Home</li></a>
+            <i class="fa-solid fa-address-card" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('about') }}"><li>About Us</li></a>
+            <i class="fa-solid fa-warehouse" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('garage') }}"><li>Garage</li></a>
+            <i class="fa-solid fa-user-minus" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('dealers') }}"><li>Dealers</li></a>
+            <i class="fa-brands fa-servicestack" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('service') }}" class="page"><li>Service</li></a>
+        </ul>
+    </div>
+
+    <div class="gf">
+    <form id="serviceForm" action="/s1" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="contactNumber">Contact Number:</label>
+        <input type="number" id="contactNumber" name="contactNumber">
+
+        <label for="carModel">Car Model:</label>
+        <select id="carModel" name="carModel">
+            <option>Maruti</option>
+            <option>Audi</option>
+            <option>BMW</option>
+            <option>Benz</option>
+        </select>
+
+        <label for="serviceType">Service Type:</label>
+        <select id="serviceType" size="2" name="serviceType">
+            <option>Repair</option>
+            <option>Maintenance</option>
+            <option>Cleaning</option>
+            <option>Others</option>
+            <option>Spare Parts Change</option>
+        </select>
+
+        <label for="otherService">If choose Others, type the service you want:</label>
+        <input type="text" id="otherService" name="otherService">
+
+        <label for="appointmentDate">Appointment Date:</label>
+        <input type="date" id="appointmentDate" name="appointmentDate">
+    </form>
+    </div>
+
+    <h1 class="hq" style="text-decoration: underline;">Pricing Table</h1>
+    <div class="uu">
+        <div class="ss">
+            <h2>For Service</h2>
+             <h3>Basic Car Wash</h3>
+             <h3>Full Service</h3>
+             <h3>Insurance Renewal</h3>
+             <h3>Maintenance</h3>
+         </div>
+         <div class="kk">
+            <h2>Price Range</h2>
+            <h3>₹500 – ₹1000</h3>
+            <h3>₹5000 – ₹10,000</h3>
+            <h3>Starts ₹15,000</h3>
+            <h3>₹3000 – ₹13,000</h3>
+         </div>
+    </div>
+
+    <h2 style="color: white;">For Payment Scan The Below QR:</h2>
+    <img src="qr.jpg" width="300px" height="300px" style="margin-left: 30px;">
+
+    <div class="jj">
+        <button type="button" onclick="savServiceApplication()">Submit</button>
+        <button type="reset" onclick='alert("Reset Done")'>Reset</button>
+    </div> 
+
+    <hr>
+    <center>
+    <footer><p>© 2025 Brand Garage. All rights reserved.</p></footer>
+    </center>
+
+    <script src="{{ url_for('static', filename='s1.js') }}"></script>
+</body>
+</html>

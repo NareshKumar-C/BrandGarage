@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Audi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='audi.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="cn">
+        <div class="nn">
+            <div class="logo"></div>
+            <u style="text-underline-offset: 5px; font-style: italic; color:black;"><h1>BRAND GARAGE</h1></u>
+        </div>
+        <ul>
+             <i class="fa-solid fa-house" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('car') }}" ><li>Home</li></a>
+            <i class="fa-solid fa-address-card" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('about') }}"><li>About Us</li></a>
+            <i class="fa-solid fa-warehouse" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('garage') }}" class="page"><li>Garage</li></a>
+            <i class="fa-solid fa-user-minus" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('dealers') }}"><li>Dealers</li></a>
+            <i class="fa-brands fa-servicestack" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('service') }}"><li>Service</li></a>
+        </ul>
+    </div>
+    <div class="lk">
+        <center><h1 style="font-size: 40px; color: brown; text-decoration: underline;">Audi A3</h1></center>
+        <div class="ee">
+            <video src="/static/audi video.mp4" width="600px" height="600px" autoplay muted></video>
+        <div class="rr">
+            <h2 style="font-style: italic;">Audi A3</h2>
+             <ul>
+                <li>Engine : 2.0L 4-cylinder engine</li>
+                <li>Fuel Economy: Approximately 28 mpg city / 36 mpg highway.</li>
+                <li>Transmission: 7-speed dual-clutch automatic transmission.</li>
+            </ul>
+            <ul>
+                <li>Torque: 400Nm-750Nm</li>
+                <li>Drive Type : AWD</li>
+                <li>Transmission : Automatic</li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    <div class="gg">
+        <h1>Audi latest updates:</h1>
+<h4>June 19, 2025: The Land Rover Defender Trophy Edition has been globally revealed as a tribute to the Camel Trophy held between 1980 and 2000. It was showcased at the 2025 Goodwood Festival Of Speed. 
+May 14, 2025: Prices of the Land Rover Defender are expected to drop by a significant margin as the British carmaker is planning to locally assemble the SUV soon.
+March 26, 2025: The Land Rover Defender Octa with a twin-turbo V8 engine has been launched in India at Rs 2.59 lakh (ex-showroom).</h4>
+    </div>
+    <U><h2 style="color: red;">MODEL COLORS WITH PRICES:</h2></U>
+    <div class="ii">
+        <div class="il">
+            <h2 style="color: yellow;">Color Variant:Yellow</h2>
+            <img src="/static/audi 1.jpg" width="290px" height="300px">
+            <h3 style="color: yellow;"> Price :₹10.50-19.40CR </h3>
+        </div>
+        <br>
+        <div class="ip">
+            <h2 style="color:red;">Color Variant:red</h2>
+            <img src="/static/audi 2.jpg" width="310px" height="300px">
+            <h3 style="color: red;"> Price :₹7.50-14.40CR </h3>
+        </div>
+    </div>
+     <hr>
+    <center>
+    <footer><p>© 2025 Brand Garage. All rights reserved.</p></footer>
+    </center>
+</body>
+</html>

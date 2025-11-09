@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Car</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='car.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="cn">
+        <div class="nn">
+            <div class="logo"></div>
+            
+            <u style="text-underline-offset: 5px; font-style: italic; color:black;"><h1>BRAND GARAGE</h1></u>
+        </div>
+        <ul>
+            <i class="fa-solid fa-house" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('car') }}" class="page"><li>Home</li></a>
+            <i class="fa-solid fa-address-card" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('about') }}"><li>About Us</li></a>
+            <i class="fa-solid fa-warehouse" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('garage') }}"><li>Garage</li></a>
+            <i class="fa-solid fa-user-minus" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('dealers') }}"><li>Dealers</li></a>
+            <i class="fa-brands fa-servicestack" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('service') }}"><li>Service</li></a>
+        </ul>
+    </div>
+    <center>
+        <marquee scrollamount="15">
+        <div class="ll">
+            <img src="/static/logo.jpg" width="90px" height="90px" style="border-radius: 50%;">
+            <h1 class="ff">BRAND GARAGE</h1>
+       </div>
+       </marquee>
+        <h2>Buy Your Dream Car</h2>
+        <a href="{{ url_for('garage') }}"><button>For Buying</button></a>
+    </center>
+     <div class="kk">
+        <ul>These Are The Main Features To Build A Client
+            <li>🚗 "Wide Range of Cars"</li>
+            <li>🛠 "Quality Service"</li>
+            <li>💰 "Best Price Guarantee"</li>
+            <li>🌍 "Trusted Dealers Worldwide"</li>
+        </ul>
+        
+    </div>   
+    <div class="io">
+            <a href="{{ url_for('index') }}"><button style="margin-top: 20px; margin-left: 40px;">Create An Account</button></a>
+    </div>
+    <center>
+    <footer><p>© 2025 Brand Garage. All rights reserved.</p></footer>
+    </center>
+</body>
+</html>

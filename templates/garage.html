@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Garage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='garage.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="cn">
+        <div class="nn">
+            <div class="logo"></div>
+            <u style="text-underline-offset: 5px; font-style: italic; color:crimson;"><h1>BRAND GARAGE</h1></u>
+        </div>
+        <ul>
+ <i class="fa-solid fa-house" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('car') }}" ><li>Home</li></a>
+            <i class="fa-solid fa-address-card" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('about') }}"><li>About Us</li></a>
+            <i class="fa-solid fa-warehouse" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('garage') }}" class="page"><li>Garage</li></a>
+            <i class="fa-solid fa-user-minus" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('dealers') }}"><li>Dealers</li></a>
+            <i class="fa-brands fa-servicestack" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('service') }}"><li>Service</li></a>
+        </ul>
+    </div>
+    <div class="sk">
+       <h1>SUV's</h1>
+       {% for CAR in carr%}
+        <div class="c">
+         <div class="c1">
+          <img src="{{url_for('static',filename=CAR.image)}}" width="400px" height="250px">
+          <div class="content">
+            <h1>{{CAR.car_brand}}</h1>
+            <p>{{CAR.car_safety}}</p>
+            <h2 style="color: darkred; font-size: 20px;">{{CAR.price}}</h2>
+            <ul>
+                <li>Mileage={{CAR.mileage}}</li>
+                <li>CC=5000CC</li>
+                <li>Capacity=7 Seater</li>
+            </ul>
+    {% if loop.index == 1 %}
+        <a href="{{ url_for('defe', suv_id=CAR._id) }}">
+            <button>More Info</button>
+        </a>
+    {% else %}
+        <button>More Info</button>
+    {% endif %}
+          </div>
+         </div>
+        </div>
+        <br>
+        {% endfor %}
+    </div>
+
+    <div class="sk">
+       <h1>AUDI</h1>
+       {% for AUDI in audii %}
+        <div class="c">
+         <div class="c1">
+          <img src="{{url_for('static',filename=AUDI.image)}}" width="400px" height="250px">
+          <div class="content">
+            <h1>{{AUDI.brand}}</h1>
+            <p>{{AUDI.star}}</p>
+            <h2 style="color: darkred; font-size: 20px;">{{AUDI.price}} </h2>
+            <ul>
+                <li>Mileage = {{AUDI.mileage}}</li>
+                <li>5000CC</li>
+                <li>Capacity = 7 Seater</li>
+            </ul>
+    {% if loop.index == 1 %}
+        <a href="{{ url_for('audi', audi_id=AUDI._id) }}">
+            <button>More Info</button>
+        </a>
+    {% else %}
+        <button>More Info</button>
+    {% endif %}          </div>
+         </div>
+        </div>
+        <br>
+        {% endfor %}
+    </div>
+    <hr>
+     <center>
+    <footer><p>© 2025 Brand Garage. All rights reserved.</p></footer>
+    </center>
+</body>
+</html>

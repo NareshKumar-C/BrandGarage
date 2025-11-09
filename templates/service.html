@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='service.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="cn">
+        <div class="nn">
+            <div class="logo"></div>
+            <u style="text-underline-offset: 5px; font-style: italic; color:black;"><h1>BRAND GARAGE</h1></u>
+        </div>
+        <ul>
+             <i class="fa-solid fa-house" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('car') }}" ><li>Home</li></a>
+            <i class="fa-solid fa-address-card" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('about') }}"><li>About Us</li></a>
+            <i class="fa-solid fa-warehouse" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('garage') }}"><li>Garage</li></a>
+            <i class="fa-solid fa-user-minus" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('dealers') }}"><li>Dealers</li></a>
+            <i class="fa-brands fa-servicestack" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('service') }}" class="page"><li>Service</li></a>
+        </ul>
+    </div>
+    <div class="jj">
+        <ul>Services List: <br> 
+            <li>Vehicle Maintenance</li>
+            <li>Car Insurance</li>
+            <li>Loan & Finance Support</li>
+            <li>24/7 Customer Care</li>
+            <li>Spare Parts & Accessories</li>
+        </ul>
+    </div>
+    <h1 style="color: white;">For Service Click Below:</h1>
+    <a href="{{ url_for('s1') }}"><button>Service</button></a>
+    <hr>
+    <center>
+    <footer><p>© 2025 Brand Garage. All rights reserved.</p></footer>
+    </center>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='acc.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="cn">
+        <div class="nn">
+            <div class="logo"></div>
+           <u style="text-underline-offset: 5px; font-style: italic; color:black;"><h1>BRAND GARAGE</h1></u>
+        </div>
+         <ul>
+            <i class="fa-solid fa-house" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('car') }}" class="page"><li>Home</li></a>
+            <i class="fa-solid fa-address-card" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('about') }}"><li>About Us</li></a>
+            <i class="fa-solid fa-warehouse" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('garage') }}"><li>Garage</li></a>
+            <i class="fa-solid fa-user-minus" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('dealers') }}"><li>Dealers</li></a>
+            <i class="fa-brands fa-servicestack" style="font-size: 25px; color: blue;"></i>
+            <a href="{{ url_for('service') }}"><li>Service</li></a>
+        </ul>
+    </div>
+    <div class="jj">
+            <!-- <form action="/save" methods="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" style="width: 230px; height: 25px;"> <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required style="width: 230px; height: 25px;">
+            <p class="mm" style="font-family: 'Times New Roman', Times, serif; font-size: 16px; margin-top: 3px;"></p>
+            <label for="confirmpwd">Confirm Password:</label>
+            <input type="password" id="confirmpwd" required style="width: 230px; height: 25px;"> <br>
+            <p class="ss" style="font-family: 'Times New Roman', Times, serif; font-size: 16px;margin-bottom: 3px;margin-top: 3px;"></p>
+            <label for="name">Address:</label>
+            <input type="text" id="name" style="width: 280px; height: 40px;"><br>
+            <label for="name">PHN NO:</label>
+            <input type="number" id="name" style="width: 230px; height: 25px;"> <br>
+            <label for="carmodel">Interested Car Model:</label> 
+                 <select id="carmodel" size="3" style="width: 100px;">
+                      <option>Maruti</option>
+                      <option>Audi</option>
+                      <option>BMW</option>
+                      <option>Benz</option>
+                      <option>Suzuki</option>
+                      <option>Honda</option>
+                      <option>Nissa</option>
+                      <option>Bolero</option>
+                      <option>Mahindra</option>
+                      <option>Other</option>
+                </select>  <br>
+           <label for="purpose">Interest:</label>
+                  <select id="purpose" size="3" style="width: 160px;">
+                            <option>Buy</option>
+                            <option>Sell</option>
+                            <option>Service Booking</option>
+                            <option>Parts Inquiry</option>
+                            <option>Exchange</option>
+                            <option>Insurance Renewal</option>
+                            <option>Suggestions</option>
+                  </select> <br> <br>
+
+             <label>
+             <input type="checkbox" required> I agree to site terms
+             </label> <br>
+                <button type="submit" style="width: 100px; height: 60px;">Create Account</button>
+            </form> -->
+            <form action="/save" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" style="width: 230px; height: 25px;" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required style="width: 230px; height: 25px;">
+            <p class="mm" style="font-family: 'Times New Roman', Times, serif; font-size: 16px; margin-top: 3px;"></p>
+
+            <label for="confirmpwd">Confirm Password:</label>
+            <input type="password" id="confirmpwd" name="confirmpwd" required style="width: 230px; height: 25px;"><br>
+            <p class="ss" style="font-family: 'Times New Roman', Times, serif; font-size: 16px;margin-bottom: 3px;margin-top: 3px;"></p>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" style="width: 280px; height: 40px;"><br>
+
+            <label for="phn">PHN NO:</label>
+            <input type="number" id="phn" name="phn" style="width: 230px; height: 25px;"><br>
+
+            <label for="carmodel">Interested Car Model:</label> 
+            <select id="carmodel" name="carmodel" size="3" style="width: 100px;">
+                <option>Maruti</option>
+                <option>Audi</option>
+                <option>BMW</option>
+                <option>Benz</option>
+                <option>Suzuki</option>
+                <option>Honda</option>
+                <option>Nissan</option>
+                <option>Bolero</option>
+                <option>Mahindra</option>
+                <option>Other</option>
+            </select><br>
+
+            <label for="purpose">Interest:</label>
+            <select id="purpose" name="purpose" size="3" style="width: 160px;">
+                <option>Buy</option>
+                <option>Sell</option>
+                <option>Service Booking</option>
+                <option>Parts Inquiry</option>
+                <option>Exchange</option>
+                <option>Insurance Renewal</option>
+                <option>Suggestions</option>
+            </select><br><br>
+
+            <label>
+                <input type="checkbox" required> I agree to site terms
+            </label><br>
+
+            <button type="submit" style="width: 100px; height: 60px;">Create Account</button>
+        </form>
+
+             <center>
+            <footer><p>© 2025 Brand Garage. All rights reserved.</p></footer>
+            </center>
+    </div>
+    <script src="{{ url_for('static', filename='acc.js') }}"></script>
+</body>
+</html>
