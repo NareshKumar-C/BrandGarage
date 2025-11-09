@@ -1,0 +1,105 @@
+body{
+    background-image: url(/static/about.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+}
+.logo{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-image: url(/static/logo.jpg);
+    background-size: cover;
+}
+
+.nn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.cn{
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
+   background-color: white;
+   margin-top: -10px;
+   border-bottom: 5px solid blueviolet;
+   padding-bottom: 20px;
+   backdrop-filter: blur(5px);
+   padding: 10px;
+}
+li{
+    list-style:none;
+    display: inline;
+}
+a{
+    text-decoration: none;
+    font-size: 23px;
+    padding: 5px;
+    color: black;
+}
+.page{
+    color:white;
+    background-color: blue;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+.ab{
+    display: grid;
+    height: 600px;
+    width: 800px;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    margin-left: 350px;
+    margin-top: 50px;
+}
+.bb{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: -90px;
+}
+.b1{
+    width: 200px;
+    height: 200px;
+    border: 3px solid brown;
+    text-align: center;
+    padding: 10px;
+}
+.b1 h3,.b2 h3{
+    margin-top: -10px;
+    color:white;
+}
+p{
+    color: white;
+}
+.b1 h1,.b2 h1{
+    color: yellow;
+}
+.cc{
+     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.b2{
+    width: 200px;
+    height: 200px;
+   border: 3px solid brown;
+    text-align: center;
+    padding: 10px;
+}
+footer{
+    background-color: white; 
+    position: relative; 
+    top: 10px; 
+    height: 100px;
+}
+footer P{
+    color: black; 
+    padding: 10px;
+    font-size: 20px; 
+    position: relative;
+    top: 30px;
+}
