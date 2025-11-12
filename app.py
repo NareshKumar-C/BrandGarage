@@ -1,45 +1,3 @@
-# from flask import Flask,render_template
-
-# app = Flask(__name__)
-
-# @app.route('/')
-# def home():
-#     return render_template("index.html")
-
-# if __name__ == '__main__':
-#     app.run(debug=True,port=700)
-
-
-
-# from flask import Flask,request
-# app=Flask(__name__)
-# users=[]
-# @app.route('/')
-# def home():
-#    return '''
-# <form action="/save" method="post">
-#   <label for="name">Name:</label><br>
-#   <input type="text" id="name" name="name"><br><br>
-#   <label for="password">Password:</label><br>
-#   <input type="password" id="password" name="password"><br><br>
-#   <input type="submit" value="save">
-# </form>
-# '''
-# @app.route('/save', methods=['POST'])
-# def save():
-#     name = request.form['name']
-#     password = request.form['password']
-#     users.append({'name': name, 'password': password}) 
-#     return f"user {name} saved! total login : {len(users)}"
-# @app.route('/users')
-# def show_users():
-#     return str(users)
-
-# if __name__ == '__main__':
-#     app.run(debug=True)
-
-
-
 from flask import Flask, render_template, request
 from flask_mysqldb import MySQL
 from pymongo import MongoClient
@@ -130,4 +88,5 @@ def ss():
     return render_template('submit.html')
 
 if __name__ == '__main__':
+
     app.run(debug=True)
